@@ -2,7 +2,7 @@ DROP DATABASE IF EXISTS `companydb`;
 
 CREATE DATABASE IF NOT EXISTS `companydb` DEFAULT CHARACTER SET latin1;
 
-/* DROP USER `student`@`localhost`; /* Uncomment to run script again */
+DROP USER `student`@`localhost`; /* Uncomment to run script again */
 CREATE USER `student`@`localhost` IDENTIFIED BY 'student';
 GRANT ALL PRIVILEGES ON companydb.* TO `student`@`localhost`;
 
@@ -20,8 +20,8 @@ CREATE TABLE `employees` (
   `hiredate` date DEFAULT NULL,
   `salary` int(11) DEFAULT NULL,
   `commission_pct` int(11) DEFAULT NULL,
-  `department_id` int(11) NOT NULL,
-  `job_id` int(11) NOT NULL,
+  `department_id` int(11),
+  `job_id` int(11),
   `address` varchar(30) DEFAULT NULL,
   `city` varchar(20) DEFAULT NULL,
   `state` char(2) DEFAULT NULL,
