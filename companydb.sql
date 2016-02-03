@@ -2,10 +2,6 @@ DROP DATABASE IF EXISTS `companydb`;
 
 CREATE DATABASE IF NOT EXISTS `companydb` DEFAULT CHARACTER SET latin1;
 
-DROP USER `student`@`localhost`; /* Uncomment to run script again */
-CREATE USER `student`@`localhost` IDENTIFIED BY 'student';
-GRANT ALL PRIVILEGES ON companydb.* TO `student`@`localhost`;
-
 USE `companydb`;
 
 DROP TABLE IF EXISTS `employees`;
